@@ -16,12 +16,12 @@ class Main {
     public static String calc(String input) {
         String[] dataInput = input.split(" ");
         if (dataInput.length != 3) {
-            return "throws Exception";
+            throw new IllegalArgumentException("throws Exception"); // новое исключение
         }
         int num1 = Integer.parseInt(dataInput[0]);
         int num2 = Integer.parseInt(dataInput[2]);
         if (num1 < 1 || num1 > 10 || num2 < 1 || num2 > 10) {
-            return "throws Exception";
+            throw new IllegalArgumentException("throws Exception");
         }
         int result;
         switch (dataInput[1]) {
@@ -36,12 +36,12 @@ class Main {
                 break;
             case "/":
                 if (num2 == 0) {
-                    return "throws Exception";
+                    throw new ArithmeticException("throws Exception");
                 }
                 result = num1 / num2;
                 break;
             default:
-                return "throws Exception";
+                throw new IllegalArgumentException("throws Exception");
         }
         return String.valueOf(result);
     }
