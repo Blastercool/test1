@@ -10,6 +10,7 @@ class Main {
             System.out.println(output);
         } catch (Exception e) {
             System.err.println(e.getMessage());
+            System.exit(1); 
         }
     }
     public static String calc(String input) {
