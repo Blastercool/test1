@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Main {
+class Main {   
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
@@ -16,7 +16,7 @@ class Main {
     public static String calc(String input) {
         String[] dataInput = input.split(" ");
         if (dataInput.length != 3) {
-            throw new IllegalArgumentException("throws Exception"); // новое исключение
+            throw new IllegalArgumentException("throws Exception"); // завершение работы с кодом ошибки 1 при этом исключении
         }
         int num1 = Integer.parseInt(dataInput[0]);
         int num2 = Integer.parseInt(dataInput[2]);
